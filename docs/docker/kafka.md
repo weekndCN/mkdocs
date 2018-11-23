@@ -3,7 +3,9 @@
 #### 1. 拉去kafka和zookeeper镜像
 
 ```
+docker pull wurstmeister/zookeeper
 
+docker pull wurstmeister/kafka
 ```
 
 #### 2. 启动zookeeper
@@ -29,10 +31,12 @@ docker exec -it kafka /bin/bash
 #### 5. 查看topic
 
 ```
+cd opt/kafka_2.11-2.0.0/
 
 ```
 
 ```
+bin/kafka-topics.sh --list --zookeeper kafka-zookeeper:2181
 
 ```
 
