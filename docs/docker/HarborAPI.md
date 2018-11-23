@@ -1,7 +1,6 @@
-# Harbor API
+# 1. 项目管理
 
-
-## 1.1     查看仓库中项目详细信息
+### 1.1     查看仓库中项目详细信息
 
 ```
 curl -u "admin:Harbor12345" -X GET -H "Content-Type: application/json" "https://192.168.56.106/api/projects/{project_id}"
@@ -9,19 +8,19 @@ curl -u "admin:Harbor12345" -X GET -H "Content-Type: application/json" "https://
 curl -u "admin:Harbor12345" -X GET -H "Content-Type: application/json" "https://192.168.56.106/api/projects?project_name=guest"
 ```
 
-## 1.2     搜索镜像
+### 1.2     搜索镜像
 
 ```
 curl  -u "admin:Harbor12345"  -X GET -H "Content-Type: application/json" "https://192.168.56.106/api/search?q=nginx"
 ```
 
-## 1.3     删除项目
+### 1.3     删除项目
 
 ```
 curl  -u "admin:Harbor12345"  -X DELETE  -H "Content-Type: application/json" "https://192.168.56.106/api/projects/{project_id}"
 ```
 
-## 1.4     创建项目
+### 1.4     创建项目
 
 ```
 curl -u "admin:Harbor12345" -X POST -H "Content-Type: application/json" "https://192.168.56.106/api/projects" -d @createproject.json
@@ -39,7 +38,7 @@ createproject.json例子
 }
 ```
 
-## 1.5     查看项目日志
+### 1.5     查看项目日志
 
 ```
 curl -u "admin:Harbor12345" -X POST -H "Content-Type: application/json" "https://192.168.56.106/api/projects/{project_id}/logs/filter" -d @log.json
@@ -55,9 +54,9 @@ curl -u "admin:Harbor12345" -X POST -H "Content-Type: application/json" "https:/
 }
 ```
 
-# 2       账号管理
+# 2.       账号管理
 
-## 2.1     创建账号
+### 2.1     创建账号
 
 ```
 curl -u "admin:Harbor12345" -X POST -H "Content-Type: application/json" "https://192.168.56.106/api/users" -d @user.json
@@ -83,25 +82,25 @@ curl -u "admin:Harbor12345" -X POST -H "Content-Type: application/json" "https:/
 }
 ```
 
-## 2.2     获取用户信息
+### 2.2     获取用户信息
 
 ```
 curl -u "admin:Harbor12345" -X GET -H "Content-Type: application/json" "https://192.168.56.106/api/users"
 ```
 
-2.3     获取当前用户信息 
+### 2.3     获取当前用户信息 
 
 ```
 curl -u "admin:Harbor12345" -X GET -H "Content-Type: application/json" "https://192.168.56.106/api/users/current"
 ```
 
-## 2.4     删除用户
+### 2.4     删除用户
 
 ```
 curl -u "admin:Harbor12345" -X DELETE  -H "Content-Type: application/json" "https://192.168.56.106/api/users/{user_id}"
 ```
 
-## 2.5     修改用户密码
+### 2.5     修改用户密码
 
 ```
 curl -u "admin:Harbor12345" -X PUT -H "Content-Type: application/json" "https://192.168.56.106/api/users/{user_id}/password" -d @uppwd.json
@@ -116,15 +115,15 @@ curl -u "admin:Harbor12345" -X PUT -H "Content-Type: application/json" "https://
 }
 ```
 
-# 3       用户权限管理
+# 3.       用户权限管理
 
-## 3.1     查看项目相关角色
+### 3.1     查看项目相关角色
 
 ```
 curl -u "admin:Harbor12345" -X GET -H "Content-Type: application/json" "https://192.168.56.106/api/projects/{project_id}/members/"
 ```
 
-## 3.2     项目添加角色
+### 3.2     项目添加角色
 
 ```
 curl -u "jaymarco:Harbor123456" -X POST  -H "Content-Type: application/json" "https://192.168.56.106/api/projects/{project_id}/members/" -d @role.json
@@ -152,7 +151,7 @@ curl -u "jaymarco:Harbor123456" -X POST  -H "Content-Type: application/json" "ht
 curl -u "jaymarco:Harbor123456" -X POST -H "Content-Type: application/json" "https://192.168.56.106/api/projects" -d @createproject.json
 ```
 
-## 3.3     删除项目中用户权限
+### 3.3     删除项目中用户权限
 
 ```
 curl -u "admin:Harbor12345" -X DELETE -H "Content-Type: application/json" "https://192.168.56.106/api/projects/{project_id}/members/{user_id}"
@@ -160,7 +159,7 @@ curl -u "admin:Harbor12345" -X DELETE -H "Content-Type: application/json" "https
 
 
 
-## 3.4     获取与用户相关的项目编号和存储库编号
+### 3.4     获取与用户相关的项目编号和存储库编号
 
 ```
 curl -u "admin:Harbor12345" -X GET -H "Content-Type: application/json" "https://192.168.56.106/api/statistics"
@@ -168,7 +167,7 @@ curl -u "admin:Harbor12345" -X GET -H "Content-Type: application/json" "https://
 
 
 
-## 3.5     修改当前用户角色
+### 3.5     修改当前用户角色
 
 has_admin_role ：0  普通用户
 
@@ -186,9 +185,9 @@ curl -u "admin:Harbor12345" -X PUT -H "Content-Type: application/json" "https://
 }
 ```
 
-# 4       镜像管理
+# 4.       镜像管理
 
-## 4.1     查询镜像
+### 4.1     查询镜像
 
 ```
 curl -u "admin:Harbor12345" -X GET -H "Content-Type: application/json" "https://192.168.56.106/api/repositories?project_id={project_id}&q=dcos%2Fcentos"
@@ -196,13 +195,13 @@ curl -u "admin:Harbor12345" -X GET -H "Content-Type: application/json" "https://
 
  
 
-## 4.2    删除镜像
+### 4.2    删除镜像
 
 ```
 curl -u "admin:Harbor12345" -X DELETE -H "Content-Type: application/json" "https://192.168.56.106/api/repositories?repo_name=dcos%2Fetcd "
 ```
 
-## 4.3     获取镜像标签
+### 4.3     获取镜像标签
 
 ```
 curl -u "admin:Harbor12345" -X GET -H "Content-Type: application/json" "https://192.168.56.106/api/repositories/tags?repo_name=dcos%2Fcentos"
