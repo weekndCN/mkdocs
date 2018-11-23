@@ -1,4 +1,4 @@
-# Installing k8s HA
+# Install k8s HA
 
 #### 1. 开启IPVS（开机需要再次加载）
 ```bash tab="Bash"
