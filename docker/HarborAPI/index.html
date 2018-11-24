@@ -1,0 +1,1089 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="只是文档分享">
+      
+      
+        <link rel="canonical" href="https://github.com/weekndchina/mkdocs/docker/HarborAPI/">
+      
+      
+        <meta name="author" content="weeknd">
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="jp">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.1.0">
+    
+    
+      
+        <title>2. HarborAPI - weeknd笔记</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/application.11e41852.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+      <script src="../../assets/javascripts/modernizr.20ef595d.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../../assets/fonts/material-icons.css">
+    
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="white" data-md-color-accent="pink">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448"
+    viewBox="0 0 416 448" id="__github">
+  <path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19-18.125
+        8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19 18.125-8.5
+        18.125 8.5 10.75 19 3.125 20.5zM320 304q0 10-3.125 20.5t-10.75
+        19-18.125 8.5-18.125-8.5-10.75-19-3.125-20.5 3.125-20.5 10.75-19
+        18.125-8.5 18.125 8.5 10.75 19 3.125 20.5zM360
+        304q0-30-17.25-51t-46.75-21q-10.25 0-48.75 5.25-17.75 2.75-39.25
+        2.75t-39.25-2.75q-38-5.25-48.75-5.25-29.5 0-46.75 21t-17.25 51q0 22 8
+        38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0
+        37.25-1.75t35-7.375 30.5-15 20.25-25.75 8-38.375zM416 260q0 51.75-15.25
+        82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5-41.75
+        1.125q-19.5 0-35.5-0.75t-36.875-3.125-38.125-7.5-34.25-12.875-30.25-20.25-21.5-28.75q-15.5-30.75-15.5-82.75
+        0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25
+        30.875q36.75-8.75 77.25-8.75 37 0 70 8 26.25-20.5
+        46.75-30.25t47.25-9.75q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34
+        99.5z" />
+</svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#1" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://github.com/weekndchina/mkdocs" title="weeknd笔记" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            
+              <span class="md-header-nav__topic">
+                weeknd笔记
+              </span>
+              <span class="md-header-nav__topic">
+                2. HarborAPI
+              </span>
+            
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          
+            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+            
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://github.com/weekndchina/mkdocs/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      weekndchina/mkdocs
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." title="Home" class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../kubernetes/Installing/" title="Kubernetes" class="md-tabs__link">
+          Kubernetes
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../kafka/" title="Docker" class="md-tabs__link md-tabs__link--active">
+          Docker
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../install/local/" title="Python" class="md-tabs__link">
+          Python
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://github.com/weekndchina/mkdocs" title="weeknd笔记" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    weeknd笔记
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://github.com/weekndchina/mkdocs/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#__github" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      weekndchina/mkdocs
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Kubernetes
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Kubernetes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../kubernetes/Installing/" title="1. Install k8s HA" class="md-nav__link">
+      1. Install k8s HA
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../install/github-pages/" title="2. ETCD" class="md-nav__link">
+      2. ETCD
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../install/http-server/" title="3. http & https" class="md-nav__link">
+      3. http & https
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Docker
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        Docker
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kafka/" title="1. kafak" class="md-nav__link">
+      1. kafak
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        2. HarborAPI
+      </label>
+    
+    <a href="./" title="2. HarborAPI" class="md-nav__link md-nav__link--active">
+      2. HarborAPI
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11" title="1.1     查看仓库中项目详细信息" class="md-nav__link">
+    1.1     查看仓库中项目详细信息
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12" title="1.2     搜索镜像" class="md-nav__link">
+    1.2     搜索镜像
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13" title="1.3     删除项目" class="md-nav__link">
+    1.3     删除项目
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14" title="1.4     创建项目" class="md-nav__link">
+    1.4     创建项目
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15" title="1.5     查看项目日志" class="md-nav__link">
+    1.5     查看项目日志
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16" title="1.6     创建账号" class="md-nav__link">
+    1.6     创建账号
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17" title="1.7     获取用户信息" class="md-nav__link">
+    1.7     获取用户信息
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18" title="1.8     获取当前用户信息" class="md-nav__link">
+    1.8     获取当前用户信息
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19" title="1.9     删除用户" class="md-nav__link">
+    1.9     删除用户
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20" title="2.0     修改用户密码" class="md-nav__link">
+    2.0     修改用户密码
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21" title="2.1     查看项目相关角色" class="md-nav__link">
+    2.1     查看项目相关角色
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22" title="2.2     项目添加角色" class="md-nav__link">
+    2.2     项目添加角色
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-weeknddcosdcos" title="2.3 用weeknd用户创建一个dcos项目，并对dcos加一个权限" class="md-nav__link">
+    2.3 用weeknd用户创建一个dcos项目，并对dcos加一个权限
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24" title="2.4     删除项目中用户权限" class="md-nav__link">
+    2.4     删除项目中用户权限
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25" title="2.5     获取与用户相关的项目编号和存储库编号" class="md-nav__link">
+    2.5     获取与用户相关的项目编号和存储库编号
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27" title="2.7     查询镜像" class="md-nav__link">
+    2.7     查询镜像
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28" title="2.8    删除镜像" class="md-nav__link">
+    2.8    删除镜像
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29" title="2.9    获取镜像标签" class="md-nav__link">
+    2.9    获取镜像标签
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../syntax/paragraph/" title="3. network" class="md-nav__link">
+      3. network
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Python
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../install/local/" title="1. k8s Install" class="md-nav__link">
+      1. k8s Install
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11" title="1.1     查看仓库中项目详细信息" class="md-nav__link">
+    1.1     查看仓库中项目详细信息
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12" title="1.2     搜索镜像" class="md-nav__link">
+    1.2     搜索镜像
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13" title="1.3     删除项目" class="md-nav__link">
+    1.3     删除项目
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14" title="1.4     创建项目" class="md-nav__link">
+    1.4     创建项目
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15" title="1.5     查看项目日志" class="md-nav__link">
+    1.5     查看项目日志
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16" title="1.6     创建账号" class="md-nav__link">
+    1.6     创建账号
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17" title="1.7     获取用户信息" class="md-nav__link">
+    1.7     获取用户信息
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18" title="1.8     获取当前用户信息" class="md-nav__link">
+    1.8     获取当前用户信息
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19" title="1.9     删除用户" class="md-nav__link">
+    1.9     删除用户
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20" title="2.0     修改用户密码" class="md-nav__link">
+    2.0     修改用户密码
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21" title="2.1     查看项目相关角色" class="md-nav__link">
+    2.1     查看项目相关角色
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22" title="2.2     项目添加角色" class="md-nav__link">
+    2.2     项目添加角色
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-weeknddcosdcos" title="2.3 用weeknd用户创建一个dcos项目，并对dcos加一个权限" class="md-nav__link">
+    2.3 用weeknd用户创建一个dcos项目，并对dcos加一个权限
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24" title="2.4     删除项目中用户权限" class="md-nav__link">
+    2.4     删除项目中用户权限
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25" title="2.5     获取与用户相关的项目编号和存储库编号" class="md-nav__link">
+    2.5     获取与用户相关的项目编号和存储库编号
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27" title="2.7     查询镜像" class="md-nav__link">
+    2.7     查询镜像
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28" title="2.8    删除镜像" class="md-nav__link">
+    2.8    删除镜像
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29" title="2.9    获取镜像标签" class="md-nav__link">
+    2.9    获取镜像标签
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/weekndchina/mkdocs/edit/master/docs/docker/HarborAPI.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="1">1. 项目管理<a class="headerlink" href="#1" title="Permanent link">&para;</a></h1>
+<h4 id="11">1.1     查看仓库中项目详细信息<a class="headerlink" href="#11" title="Permanent link">&para;</a></h4>
+<div class="superfences-tabs">
+<input name="__tabs_1" type="radio" id="__tab_1_0" checked="checked" />
+<label for="__tab_1_0">Bash</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span>curl -u <span class="s2">&quot;admin:Harbor12345&quot;</span> -X GET -H <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="s2">&quot;https://192.168.1.100/api/projects?project_name=guest&quot;</span>
+</pre></div></div>
+</div>
+<h4 id="12">1.2     搜索镜像<a class="headerlink" href="#12" title="Permanent link">&para;</a></h4>
+<div class="superfences-tabs">
+<input name="__tabs_2" type="radio" id="__tab_2_0" checked="checked" />
+<label for="__tab_2_0">Bash</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span>curl  -u <span class="s2">&quot;admin:Harbor12345&quot;</span>  -X GET -H <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="s2">&quot;https://192.168.1.100/api/search?q=nginx&quot;</span>
+</pre></div></div>
+</div>
+<h4 id="13">1.3     删除项目<a class="headerlink" href="#13" title="Permanent link">&para;</a></h4>
+<div class="superfences-tabs">
+<input name="__tabs_3" type="radio" id="__tab_3_0" checked="checked" />
+<label for="__tab_3_0">Bash</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span>curl  -u <span class="s2">&quot;admin:Harbor12345&quot;</span>  -X DELETE  -H <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="s2">&quot;https://192.168.1.100/api/projects/{project_id}&quot;</span>
+</pre></div></div>
+</div>
+<h4 id="14">1.4     创建项目<a class="headerlink" href="#14" title="Permanent link">&para;</a></h4>
+<div class="superfences-tabs">
+<input name="__tabs_4" type="radio" id="__tab_4_0" checked="checked" />
+<label for="__tab_4_0">Bash</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span>curl -u <span class="s2">&quot;admin:Harbor12345&quot;</span> -X POST -H <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="s2">&quot;https://192.168.1.100/api/projects&quot;</span> -d @createproject.json
+</pre></div></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">createproject.json<p>{
+        "project_name": "testrpo",
+        "public": 0
+}</p>
+</p>
+</div>
+<h4 id="15">1.5     查看项目日志<a class="headerlink" href="#15" title="Permanent link">&para;</a></h4>
+<div class="superfences-tabs">
+<input name="__tabs_5" type="radio" id="__tab_5_0" checked="checked" />
+<label for="__tab_5_0">Bash</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span>curl -u <span class="s2">&quot;admin:Harbor12345&quot;</span> -X POST -H <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="s2">&quot;https://192.168.1.100/api/projects/{project_id}/logs/filter&quot;</span> -d @log.json
+</pre></div></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">log.json</p>
+<p>{
+  "username": "admin"
+}</p>
+</div>
+<h4 id="16">1.6     创建账号<a class="headerlink" href="#16" title="Permanent link">&para;</a></h4>
+<div class="superfences-tabs">
+<input name="__tabs_6" type="radio" id="__tab_6_0" checked="checked" />
+<label for="__tab_6_0">Bash</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span>curl -u <span class="s2">&quot;admin:Harbor12345&quot;</span> -X POST -H <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="s2">&quot;https://192.168.1.100/api/users&quot;</span> -d @user.json
+</pre></div></div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">user.json</p>
+<p>{
+  "user_id": 5,
+  "username": "weeknd",
+  "email": "<a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#119;&#101;&#101;&#107;&#110;&#100;&#46;&#115;&#117;&#64;&#104;&#111;&#116;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#119;&#101;&#101;&#107;&#110;&#100;&#46;&#115;&#117;&#64;&#104;&#111;&#116;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a>",
+  "password": "12345",
+  "realname": "weeknd",
+  "role_id": 2
+}</p>
+</div>
+<h4 id="17">1.7     获取用户信息<a class="headerlink" href="#17" title="Permanent link">&para;</a></h4>
+<div class="superfences-tabs">
+<input name="__tabs_7" type="radio" id="__tab_7_0" checked="checked" />
+<label for="__tab_7_0">Bash</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span>curl -u <span class="s2">&quot;admin:Harbor12345&quot;</span> -X GET -H <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="s2">&quot;https://192.168.1.100/api/users&quot;</span>
+</pre></div></div>
+</div>
+<h4 id="18">1.8     获取当前用户信息<a class="headerlink" href="#18" title="Permanent link">&para;</a></h4>
+<div class="superfences-tabs">
+<input name="__tabs_8" type="radio" id="__tab_8_0" checked="checked" />
+<label for="__tab_8_0">Bash</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span>curl -u <span class="s2">&quot;admin:Harbor12345&quot;</span> -X GET -H <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="s2">&quot;https://192.168.1.100/api/users/current&quot;</span>
+</pre></div></div>
+</div>
+<h4 id="19">1.9     删除用户<a class="headerlink" href="#19" title="Permanent link">&para;</a></h4>
+<div class="superfences-tabs">
+<input name="__tabs_9" type="radio" id="__tab_9_0" checked="checked" />
+<label for="__tab_9_0">Bash</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span>curl -u <span class="s2">&quot;admin:Harbor12345&quot;</span> -X DELETE  -H <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="s2">&quot;https://192.168.1.100/api/users/{user_id}&quot;</span>
+</pre></div></div>
+</div>
+<h4 id="20">2.0     修改用户密码<a class="headerlink" href="#20" title="Permanent link">&para;</a></h4>
+<div class="superfences-tabs">
+<input name="__tabs_10" type="radio" id="__tab_10_0" checked="checked" />
+<label for="__tab_10_0">Bash</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span>curl -u <span class="s2">&quot;admin:Harbor12345&quot;</span> -X PUT -H <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="s2">&quot;https://192.168.1.100/api/users/{user_id}/password&quot;</span> -d @uppwd.json
+</pre></div></div>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">uppwd.json</p>
+<p>{
+  "old_password": "Harbor123456",
+  "new_password": "Harbor12345"
+}</p>
+</div>
+<h4 id="21">2.1     查看项目相关角色<a class="headerlink" href="#21" title="Permanent link">&para;</a></h4>
+<div class="superfences-tabs">
+<input name="__tabs_11" type="radio" id="__tab_11_0" checked="checked" />
+<label for="__tab_11_0">Bash</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span>curl -u <span class="s2">&quot;admin:Harbor12345&quot;</span> -X GET -H <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="s2">&quot;https://192.168.1.100/api/projects/{project_id}/members/&quot;</span>
+</pre></div></div>
+</div>
+<h4 id="22">2.2     项目添加角色<a class="headerlink" href="#22" title="Permanent link">&para;</a></h4>
+<div class="superfences-tabs">
+<input name="__tabs_12" type="radio" id="__tab_12_0" checked="checked" />
+<label for="__tab_12_0">Bash</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span>curl -u <span class="s2">&quot;jaymarco:Harbor123456&quot;</span> -X POST  -H <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="s2">&quot;https://192.168.1.100/api/projects/{project_id}/members/&quot;</span> -d @role.json
+</pre></div></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">role.json</p>
+<p>{
+  "roles": [3],
+  "username": "guest"
+}</p>
+</div>
+<h4 id="23-weeknddcosdcos">2.3 用weeknd用户创建一个dcos项目，并对dcos加一个权限<a class="headerlink" href="#23-weeknddcosdcos" title="Permanent link">&para;</a></h4>
+<div class="superfences-tabs">
+<input name="__tabs_13" type="radio" id="__tab_13_0" checked="checked" />
+<label for="__tab_13_0">Bash</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span>curl -u <span class="s2">&quot;weeknd:Harbor123456&quot;</span> -X POST -H <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="s2">&quot;https://192.168.1.100/api/projects&quot;</span> -d @createproject.json
+</pre></div></div>
+</div>
+<h4 id="24">2.4     删除项目中用户权限<a class="headerlink" href="#24" title="Permanent link">&para;</a></h4>
+<div class="superfences-tabs">
+<input name="__tabs_14" type="radio" id="__tab_14_0" checked="checked" />
+<label for="__tab_14_0">Bash</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span>curl -u <span class="s2">&quot;admin:Harbor12345&quot;</span> -X DELETE -H <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="s2">&quot;https://192.168.1.100/api/projects/{project_id}/members/{user_id}&quot;</span>
+</pre></div></div>
+</div>
+<h4 id="25">2.5     获取与用户相关的项目编号和存储库编号<a class="headerlink" href="#25" title="Permanent link">&para;</a></h4>
+<div class="superfences-tabs">
+<input name="__tabs_15" type="radio" id="__tab_15_0" checked="checked" />
+<label for="__tab_15_0">Bash</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span>curl -u <span class="s2">&quot;admin:Harbor12345&quot;</span> -X GET -H <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="s2">&quot;https://192.168.1.100/api/statistics&quot;</span>
+</pre></div></div>
+</div>
+<div class="admonition warning">
+<p><code>has_admin_role ：0</code>  <strong>普通用户</strong><br />
+<code>has_admin_role ：1</code>  <strong>管理员</strong></p>
+</div>
+<div class="superfences-tabs">
+<input name="__tabs_16" type="radio" id="__tab_16_0" checked="checked" />
+<label for="__tab_16_0">Bash</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span>curl -u <span class="s2">&quot;admin:Harbor12345&quot;</span> -X PUT -H <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="s2">&quot;https://192.168.1.100/api/users/{user_id}/sysadmin &quot;</span> -d @chgrole.json
+</pre></div></div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">chgrole.json</p>
+<p>{
+  "has_admin_role": 1
+}</p>
+</div>
+<h4 id="27">2.7     查询镜像<a class="headerlink" href="#27" title="Permanent link">&para;</a></h4>
+<div class="superfences-tabs">
+<input name="__tabs_17" type="radio" id="__tab_17_0" checked="checked" />
+<label for="__tab_17_0">Bash</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span>curl -u <span class="s2">&quot;admin:Harbor12345&quot;</span> -X GET -H <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="s2">&quot;https://192.168.1.100/api/repositories?project_id={project_id}&amp;q=dcos%2Fcentos&quot;</span>
+</pre></div></div>
+</div>
+<h4 id="28">2.8    删除镜像<a class="headerlink" href="#28" title="Permanent link">&para;</a></h4>
+<div class="superfences-tabs">
+<input name="__tabs_18" type="radio" id="__tab_18_0" checked="checked" />
+<label for="__tab_18_0">Bash</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span>curl -u <span class="s2">&quot;admin:Harbor12345&quot;</span> -X DELETE -H <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="s2">&quot;https://192.168.1.100/api/repositories?repo_name=dcos%2Fetcd &quot;</span>
+</pre></div></div>
+</div>
+<h4 id="29">2.9    获取镜像标签<a class="headerlink" href="#29" title="Permanent link">&para;</a></h4>
+<div class="superfences-tabs">
+<input name="__tabs_19" type="radio" id="__tab_19_0" checked="checked" />
+<label for="__tab_19_0">Bash</label>
+<div class="superfences-content"><div class="codehilite"><pre><span></span>curl -u <span class="s2">&quot;admin:Harbor12345&quot;</span> -X GET -H <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="s2">&quot;https://192.168.1.100/api/repositories/tags?repo_name=dcos%2Fcentos&quot;</span>
+</pre></div></div>
+</div>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../kafka/" title="1. kafak" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  后退
+                </span>
+                1. kafak
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../syntax/paragraph/" title="3. network" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前进
+                </span>
+                3. network
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+        
+  <div class="md-footer-social">
+    <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
+    
+      <a href="https://github.com/weeknd" class="md-footer-social__link fa fa-github"></a>
+    
+  </div>
+
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/application.9e1f3b71.js"></script>
+      
+        
+        
+          
+          <script src="../../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../../assets/javascripts/lunr/lunr.jp.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
+      
+        <script src="../../js/extra.js"></script>
+      
+        <script src="../../js/baidu-tongji.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>
