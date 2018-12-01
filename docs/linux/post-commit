@@ -1,0 +1,37 @@
+#!/bin/sh
+REPOS="$1"
+REV="$2"
+
+SVNLOOK=/usr/bin/svnlook
+LOGFILE=/weeknd/svn/test/hooks/tmp.log
+AUTHOR=`"$SVNLOOK" author -r "$REV" "$REPOS"`
+CHANGED=`"$SVNLOOK" changed -r "$REV" "$REPOS"`
+DATETIME=`"$SVNLOOK" date -r "$REV" "$REPOS"`
+COMMENT=`"$SVNLOOK" log -r "$REV" "$REPOS"`
+
+echo "$AUTHOR" "$CHANGED" "$DATETIME" "$COMMENT"> "$LOGFILE"
+
+function send2dingding(){
+	url="https://oapi.dingtalk.com/robot/send?access_token=xxxxxxxx"
+        res=`curl -X POST -H "Content-Type:application/json" $url -d "
+	{
+	\"actionCard\": {
+		\"title\": \"SVN MONITOR\",
+		\"text\": \"### <font color=#FFA500> SVN</font>\n\n**Author:** weekend\n\n**Changed**:'111'\n\n**Date:**'2018-11-29 07:51:49'\n\n**Comment:**'add a file'\",
+		\"hideAvatar\": \"0\",
+		\"btnOrientation\": \"1\",
+		\"btns\": [
+		{
+			\"title\": \"SYNC TO TEST\",
+			\"actionURL\": \"https://www.dingtalk.com/\"
+		},
+		{
+			\"title\": \"NOT SYNC\",
+			\"actionURL\": \"https://www.dingtalk.com\"
+		}
+		]
+	},
+	\"msgtype\": \"actionCard\"
+	}" `
+}
+send2dingding
