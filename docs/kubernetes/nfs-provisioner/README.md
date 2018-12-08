@@ -79,7 +79,7 @@ roleRef:
 - 应用RBAC
 
 ```shell
-
+kubectl create -f rbac.yaml
 ```
 
 #### STEP 3:创建nfs-client-provisioner
@@ -233,8 +233,8 @@ spec:
 
 - 创建pod
 
-```
-
+```shell
+kubectl create -f deployment.yaml
 ```
 
 - 检查生成的文件
