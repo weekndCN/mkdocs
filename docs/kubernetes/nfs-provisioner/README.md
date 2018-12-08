@@ -177,20 +177,8 @@ spec:
 
 - 创建PVC
 
-```yaml
-kind: PersistentVolumeClaim
-apiVersion: v1
-metadata:
-  name: test-claim
-  namespace: misc
-  annotations:
-    volume.beta.kubernetes.io/storage-class: "managed-nfs-storage"
-spec:
-  accessModes:
-    - ReadWriteMany
-  resources:
-    requests:
-      storage: 1Mi
+```shell
+kubectl create -f storageclass.yaml
 ```
 
 - 检查PVC
