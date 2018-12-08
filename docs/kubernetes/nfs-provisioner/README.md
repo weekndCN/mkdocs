@@ -131,7 +131,7 @@ spec:
 - 创建deployment
 
 ```shell
-
+kubectl create -f deployment.yaml
 ```
 
 #### STEP 4:创建一个storageClass
