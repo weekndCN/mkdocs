@@ -86,7 +86,7 @@ kubectl create -f rbac.yaml
 
 - 编写nfs-client-provisioner的deployment.yaml
 
-```
+```yaml
 apiVersion: v1
 kind: ServiceAccount
 metadata:
