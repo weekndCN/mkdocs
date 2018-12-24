@@ -2,57 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://github.com/weekndchina/mkdocs/</loc>
-     <lastmod>2018-12-10</lastmod>
+     <lastmod>2018-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/weekndchina/mkdocs/kubernetes/Installing/</loc>
-     <lastmod>2018-12-10</lastmod>
+     <lastmod>2018-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/weekndchina/mkdocs/kubernetes/nodeselector/</loc>
-     <lastmod>2018-12-10</lastmod>
+     <lastmod>2018-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/weekndchina/mkdocs/kubernetes/nfs-provisioner/</loc>
-     <lastmod>2018-12-10</lastmod>
+     <lastmod>2018-12-24</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/weekndchina/mkdocs/kubernetes/nodeinstall/</loc>
+     <lastmod>2018-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/weekndchina/mkdocs/docker/kafka/</loc>
-     <lastmod>2018-12-10</lastmod>
+     <lastmod>2018-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/weekndchina/mkdocs/docker/HarborAPI/</loc>
-     <lastmod>2018-12-10</lastmod>
+     <lastmod>2018-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/weekndchina/mkdocs/syntax/paragraph/</loc>
-     <lastmod>2018-12-10</lastmod>
+     <lastmod>2018-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/weekndchina/mkdocs/linux/97command/</loc>
-     <lastmod>2018-12-10</lastmod>
+     <lastmod>2018-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/weekndchina/mkdocs/linux/gitcommand/</loc>
-     <lastmod>2018-12-10</lastmod>
+     <lastmod>2018-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/weekndchina/mkdocs/python/datachart/</loc>
-     <lastmod>2018-12-10</lastmod>
+     <lastmod>2018-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/weekndchina/mkdocs/python/transnum/</loc>
-     <lastmod>2018-12-10</lastmod>
+     <lastmod>2018-12-24</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
